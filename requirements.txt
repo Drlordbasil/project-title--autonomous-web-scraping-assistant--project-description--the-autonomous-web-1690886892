@@ -1,0 +1,14 @@
+To determine the package requirements for this Python program, we need to identify the imported modules and packages. 
+
+In this case, the following packages are imported:
+- requests
+- bs4 from BeautifulSoup
+
+Therefore, the package requirements for this Python program are:
+- requests
+- beautifulsoup4
+
+You can install these packages by running the following command:
+```
+pip install requests beautifulsoup4
+```
