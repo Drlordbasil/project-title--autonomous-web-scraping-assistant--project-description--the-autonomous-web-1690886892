@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
+
 class WebScraper:
     def __init__(self, url):
         self.url = url
@@ -19,13 +20,16 @@ class WebScraper:
                 transformed_data = data_div.get_text(strip=True)
                 return transformed_data
             else:
-                raise Exception('Failed to retrieve data. Please check the HTML structure.')
+                raise Exception(
+                    'Failed to retrieve data. Please check the HTML structure.')
 
         except requests.exceptions.HTTPError as e:
-            raise Exception(f'HTTP Error occurred while sending the request: {str(e)}')
+            raise Exception(
+                f'HTTP Error occurred while sending the request: {str(e)}')
 
         except requests.exceptions.RequestException as e:
-            raise Exception(f'An error occurred while sending the request: {str(e)}')
+            raise Exception(
+                f'An error occurred while sending the request: {str(e)}')
 
 
 def main():
